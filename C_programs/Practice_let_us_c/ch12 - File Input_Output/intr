@@ -1,0 +1,208 @@
+
+
+
+
+
+
+
+
+(a)Write a program to read a file and display contents with its 
+line numbers. 
+(b)Write a program to find the size of a text file without 
+traversing it character by character. 
+(c)Write a program to add the contents of one file at the end of 
+another. 
+
+(d)Suppose a file contains students records with each record 
+containing name and age of a student. Write a program to read 
+these records and display them in sorted order by name. 
+Write a program to copy one file to another. While doing so 
+replace all lowercase characters to their equivalent uppercase 
+characters. 
+
+(e)Write a program that merges lines alternately from two files 
+and writes the results to new file. If one file has less number 
+of lines than the other, the remaining lines from the larger file 
+should be simply copied into the target file. 
+
+(f)Write a program to display the contents of a text file on the 
+screen. Make following provisions: 
+
+(g)Display the contents inside a box drawn with opposite corner 
+co-ordinates being ( 0, 1 ) and ( 79, 23 ). Display the name of 
+the file whose contents are being displayed, and the page 
+numbers in the zeroth row. The moment one screenful of file 
+has been displayed, flash a message ‘Press any key...’ in 24th
+row. When a key is hit, the next page’s contents should be 
+displayed, and so on till the end of file. 
+
+
+(h)Write a program to encrypt/decrypt a file using: 
+
+(1) An offset cipher: In an offset cipher each character from 
+the source file is offset with a fixed value and then 
+written to the target file. 
+For example, if character read from the source file is ‘A’, 
+then convert this into a new character by offsetting ‘A’ 
+by a fixed value, say 128, and then writing the new 
+character to the target file. 
+
+
+(2) A substitution cipher: In this each character read from the 
+source file is substituted by a corresponding 
+predetermined character and this character is written to 
+the target file. 
+For example, if character ‘A’ is read from the source file, 
+and if we have decided that every ‘A’ is to be substituted 
+by ‘!’, then a ‘!’ would be written to the target file in 
+place of every ‘A’ Similarly, every ‘B’ would be 
+substituted by ‘5’ and so on. 
+
+
+(i) In the file ‘CUSTOMER.DAT’ there are 100 records with the 
+following structure: 
+struct customer 
+{ 
+ int accno ; 
+ char name[30] ; 
+ float balance ; 
+} ; 
+In another file ‘TRANSACTIONS.DAT’ there are several 
+records with the following structure: 
+struct trans 
+{ 
+ int accno , 
+ char trans_type ; 
+Chapter 12: File Input/Output 461
+ float amount ; 
+} ; 
+The parameter trans_type contains D/W indicating deposit or 
+withdrawal of amount. Write a program to update 
+‘CUSTOMER.DAT’ file, i.e. if the trans_type is ‘D’ then 
+update the balance of ‘CUSTOMER.DAT’ by adding 
+amount to balance for the corresponding accno. Similarly, if 
+trans_type is ‘W’ then subtract the amount from balance. 
+However, while subtracting the amount make sure that the 
+amount should not get overdrawn, i.e. at least 100 Rs. Should 
+remain in the account. 
+
+
+(j)
+There are 100 records present in a file with the following 
+structure: 
+struct date 
+{ 
+ int d, m, y ; 
+} ; 
+struct employee 
+{ 
+ int empcode[6] ; 
+ char empname[20] ; 
+ struct date join_date ; 
+ float salary ; 
+} ; 
+Write a program to read these records, arrange them in 
+ascending order of join_date and write them in to a target 
+file. 
+
+
+(k)A hospital keeps a file of blood donors in which each record 
+has the format: 
+Name: 20 Columns 
+Address: 40 Columns 
+462 Let Us C 
+Age: 2 Columns 
+Blood Type: 1 Column (Type 1, 2, 3 or 4) 
+Write a program to read the file and print a list of all blood 
+donors whose age is below 25 and blood is type 2. 
+
+
+
+
+(l)Given a list of names of students in a class, write a program to 
+store the names in a file on disk. Make a provision to display 
+the nth name in the list (n is data to be read) and to display all 
+names starting with S. 
+
+(m)Assume that a Master file contains two fields, Roll no. and 
+name of the student. At the end of the year, a set of students 
+join the class and another set leaves. A Transaction file 
+contains the roll numbers and an appropriate code to add or 
+delete a student. 
+
+
+(n)Write a program to create another file that contains the 
+updated list of names and roll numbers. Assume that the 
+Master file and the Transaction file are arranged in ascending 
+order by roll numbers. The updated file should also be in 
+ascending order by roll numbers. 
+
+
+(o)In a small firm employee numbers are given in serial 
+numerical order, that is 1, 2, 3, etc. 
+− Create a file of employee data with following information: 
+employee number, name, sex, gross salary. 
+− If more employees join, append their data to the file. 
+− If an employee with serial number 25 (say) leaves, delete 
+the record by making gross salary 0. 
+− If some employee’s gross salary increases, retrieve the 
+record and update the salary. 
+Write a program to implement the above operations. 
+Given a text file, write a program to create another text file 
+deleting the words “a”, “the”, “an” and replacing each one of 
+them with a blank space. 
+Chapter 12: File Input/Output 463
+(p)
+(q)
+(r)
+You are given a data file EMPLOYEE.DAT with the 
+following record structure: 
+struct employee { 
+ int empno ; 
+ char name[30] ; 
+ int basic, grade ; 
+ } ; 
+Every employee has a unique empno and there are supposed 
+to be no gaps between employee numbers. Records are 
+entered into the data file in ascending order of employee 
+number, empno. It is intended to check whether there are 
+missing employee numbers. Write a program segment to read 
+the data file records sequentially and display the list of 
+missing employee numbers. 
+Write a program to carry out the following: 
+− To read a text file “TRIAL.TXT” consisting of a 
+maximum of 50 lines of text, each line with a maximum 
+of 80 characters. 
+− Count and display the number of words contained in the 
+file. 
+− Display the total number of four letter words in the text 
+file. 
+Assume that the end of a word may be a space, comma or a 
+full-stop followed by one or more spaces or a newline 
+character. 
+Write a program to read a list of words, sort the words in 
+alphabetical order and display them one word per line. Also 
+give the total number of words in the list. Output format 
+should be: 
+Total Number of words in the list is _______ 
+Alphabetical listing of words is: 
+------ 
+------ 
+464 Let Us C 
+------ 
+Assume the end of the list is indicated by ZZZZZZ and there 
+are maximum in 25 words in the Text file. 
+(s)
+(t)
+Write a program to carry out the following:
+(a) Read a text file ‘INPUT.TXT’ 
+(b) Print each word in reverse order 
+Example, 
+Input: INDIA IS MY COUNTRY 
+Output: AIDNI SI YM YRTNUOC 
+Assume that each word length is maximum of 10 characters 
+and each word is separated by newline/blank characters. 
+Write a C program to read a large text file ‘NOTES.TXT’ and 
+print it on the printer in cut-sheets, introducing page breaks at 
+the end of every 50 lines and a pause message on the screen at 
+the end of every page for the user to change the paper.

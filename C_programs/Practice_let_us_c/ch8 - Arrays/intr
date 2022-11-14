@@ -1,0 +1,263 @@
+(a) How will you initialize a three-dimensional array 
+threed[3][2][3]? How will you refer the first and last element 
+in this array? 
+
+
+(b) Write a program to pick up the largest number from any 5 row 
+by 5 column matrix. 
+
+
+(c) Write a program to obtain transpose of a 4 x 4 matrix. The 
+transpose of a matrix is obtained by exchanging the elements 
+of each row with the elements of the corresponding column. 
+
+
+(d) Very often in fairs we come across a puzzle that contains 15 
+numbered square pieces mounted on a frame. These pieces 
+can be moved horizontally or vertically. A possible 
+arrangement of these pieces is shown below: 
+
+                          
+                       1   4  15   7 
+                       8  10   2  11 
+                      14   3   6  13 
+                      12   9   5   0
+                
+As you can see there is a blank at bottom right corner. 
+Implement the following procedure through a program:
+
+
+Draw the boxes as shown above. Display the numbers in the 
+above order. Allow the user to hit any of the arrow keys (up, 
+down, left, or right). 
+If user hits say, right arrow key then the piece with a number 
+5 should move to the right and blank should replace the 
+original position of 5. Similarly, if down arrow key is hit, then 
+13 should move down and blank should replace the original 
+position of 13. If left arrow key or up arrow key is hit then no 
+action should be taken. 
+The user would continue hitting the arrow keys till the 
+numbers aren’t arranged in ascending order. 
+Keep track of the number of moves in which the user manages 
+to arrange the numbers in ascending order. The user who 
+manages it in minimum number of moves is the one who 
+wins. 
+How do we tackle the arrow keys? We cannot receive them 
+using scanf( ) function. Arrow keys are special keys which 
+are identified by their ‘scan codes’. Use the following 
+function in your program. It would return the scan code of the 
+arrow key being hit. Don’t worry about how this function is 
+written. We are going to deal with it later. The scan codes for 
+the arrow keys are: 
+up arrow key – 72 down arrow key – 80 
+left arrow key – 75 right arrow key – 77 
+/* Returns scan code of the key that has been hit */ 
+#include "dos.h" 
+getkey( ) 
+{ 
+ union REGS i, o ;
+ while ( !kbhit( ) ) 
+ ; 
+ i.h.ah = 0 ; 
+ int86 ( 22, &i, &o ) ; 
+ return ( o.h.ah ) ; 
+} 
+
+
+
+
+(e) Those readers who are from an Engineering/Science 
+background may try writing programs for following problems. 
+(1) Write a program to add two 6 x 6 matrices. 
+(2) Write a program to multiply any two 3 x 3 matrices. 
+(3) Write a program to sort all the elements of a 4 x 4 matrix. 
+(4) Write a program to obtain the determinant value of a 5 x 
+5 matrix. 
+
+
+
+(f) Match the following with reference to the following program 
+segment: 
+int i, j, = 25; 
+int *pi, *pj = & j; 
+……. 
+……. /* more lines of program */ 
+……. 
+*pj = j + 5; 
+j = *pj + 5 ; 
+pj = pj ; 
+*pi = i + j 
+Each integer quantity occupies 2 bytes of memory. The value 
+assigned to i begin at (hexadecimal) address F9C and the 
+value assigned to j begins at address F9E. Match the value 
+represented by left hand side quantities with the right. 
+1. &i                        a. 30 
+2. &j                        b. F9E 
+3. pj                        c. 35 
+4. *pj                       d. FA2
+
+5. i                         e. F9C 
+6. pi                        f. 67 
+7. *pi                        g. unspecified 
+8. ( pi + 2 )                 h. 65 
+9. (*pi + 2)                  i. F9E 
+10. * ( pi + 2 )              j. F9E 
+                              k. FAO 
+                              l. F9D 
+(g) Match the following with reference to the following segment: 
+int x[3][5] = { 
+ { 1, 2, 3, 4, 5 }, 
+ { 6, 7, 8, 9, 10 }, 
+ { 11, 12, 13, 14, 15 } 
+ }, *n = &x ; 
+
+
+1. *( *( x + 2 ) + 1)          a. 9 
+2. *( *x + 2 ) + 5             b. 13 
+3. *( *( x + 1) )              c. 4 
+4. *( *( x ) + 2 ) + 1         d. 3 
+5. * ( *( x + 1 ) + 3 )        e. 2 
+6. *n                          f. 12 
+7. *( n +2 )                   g. 14 
+8. (*(n + 3 ) + 1              h. 7 
+9. *(n + 5)+1                  i. 1 
+10. ++*n                       j. 8 
+                               k. 5 
+                               l. 10 
+                               m. 6 
+(h) Match the following with reference to the following program 
+segment:
+
+
+
+struct 
+{ 
+ int x, y; 
+} s[ ] = { 10, 20, 15, 25, 8, 75, 6, 2 }; 
+int *i ; 
+i = s ;
+
+
+1. *( i + 3 )                          a. 85 
+2. s[i[7]].x                           b. 2 
+3. s[ (s + 2)->y / 3[I]].y             c. 6 
+4. i[i[1]-i[2]]                        d. 7 
+5. i[s[3].y]                           e. 16 
+6. ( s + 1 )->x + 5                    f. 15 
+7. *( 1 +i )**( i + 4 ) / *i           g. 25 
+8. s[i[0] – i[4]].y + 10               h. 8 
+9. ( *(s + *( i + 1) / *i ) ).x + 2    i. 1 
+10. ++i[i[6]]                          j. 100 
+                                       k. 10 
+                                       l. 20 
+(i) Match the following with reference to the following program 
+segment: 
+unsigned int arr[3][3] = { 
+                          2, 4, 6, 
+                          9, 1, 10, 
+                          16, 64, 5 
+                          } ; 
+
+
+1. **arr                                         a. 64 
+2. **arr < *( *arr + 2 )                         b. 18 
+3. *( arr + 2 ) / ( *( *arr + 1 ) > **arr )      c. 6 
+4. *( arr[1] + 1 ) | arr[1][2]                   d. 3 
+5. *( arr[0] ) | *( arr[2] )                     e. 0 
+6. arr[1][1] < arr[0][1]                         f. 16 
+7. arr[2][[1] & arr[2][0]                        g. 1 
+8. arr[2][2] | arr[0][1]                         h. 11 
+9. arr[0][1] ^ arr[0][2]                         i. 20 
+10. ++**arr + --arr[1][1]                        j. 2 
+                                                 k. 5 
+                                                 l. 4 
+(j) Write a program that interchanges the odd and even 
+components of an array.
+
+
+(k) Write a program to find if a square matrix is symmetric.
+
+(l) Write a function to find the norm of a matrix. The norm is 
+defined as the square root of the sum of squares of all 
+elements in the matrix. 
+
+(m) Given an array p[5], write a function to shift it circularly left 
+by two positions. Thus, if p[0] = 15, p[1]= 30, p[2] = 28, 
+p[3]= 19 and p[4] = 61 then after the shift p[0] = 28, p[1] = 
+19, p[2] = 61, p[3] = 15 and p[4] = 30. Call this function for a 
+(4 x 5 ) matrix and get its rows left shifted. 
+
+
+(n) A 6 x 6 matrix is entered through the keyboard and stored in a
+2-dimensional array mat[7][7]. Write a program to obtain the 
+Determinant values of this matrix. 
+
+
+(o) For the following set of sample data, compute the standard
+deviation and the mean. 
+-6, -12, 8, 13, 11, 6, 7, 2, -6, -9, -10, 11, 10, 9, 2 
+The formula for standard deviation is 
+
+where xi is the data item and x is the mean. 
+
+
+ (p) The area of a triangle can be computed by the sine law when 2 
+sides of the triangle and the angle between them are known.
+Area = (1 / 2 ) ab sin ( angle )
+Given the following 6 triangular pieces of land, write a 
+program to find their area and determine which is largest, 
+
+
+Plot No.   a      b        angle 
+1         137.4   80.9     0.78
+2         155.2   92.62    0.89
+3         149.3   97.93    1.35
+
+
+
+4 160.0 100.25 9.00
+5 155.6 68.95 1.25
+6 149.7 120.0 1.75
+
+
+
+(q) For the following set of n data points (x, y), compute the 
+correlation coefficient r, given by
+
+ x                         y
+34.22                    102.43
+39.87                    100.93
+41.85                    97.43
+43.23                    97.81
+40.06                    98.32
+53.29                    98.32
+53.29                    100.07
+54.14                    97.08
+49.12                    91.59
+40.71                    94.85
+55.15                    94.65
+
+
+(r) For the following set of point given by (x, y) fit a straight line 
+given by
+y = a + bx 
+where, 
+ and 
+
+x              y
+4.5           2.0 
+5.5           3.5 
+6.5           5.0 
+7.5           6.0 
+8.5           7.5 
+8.0           9.0 
+9.0           10.5 
+9.5           12.0 
+10.0           14.0 
+
+
+
+(s) The X and Y coordinates of 10 different points are entered 
+through the keyboard. Write a program to find the distance of 
+last point from the first point (sum of distance between 
+consecutive points). 

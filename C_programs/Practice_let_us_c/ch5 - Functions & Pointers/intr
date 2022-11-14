@@ -1,0 +1,72 @@
+(a) A 5-digit positive integer is entered through the keyboard, 
+write a function to calculate sum of digits of the 5-digit 
+number: 
+(1) Without using recursion 
+(2) Using recursion 
+
+
+(b) A positive integer is entered through the keyboard, write a 
+program to obtain the prime factors of the number. Modify the
+function suitably to obtain the prime factors recursively.
+
+
+
+(c) Write a recursive function to obtain the first 25 numbers of a 
+Fibonacci sequence. In a Fibonacci sequence the sum of two 
+successive terms gives the third term. Following are the first
+few terms of the Fibonacci sequence: 
+1 1 2 3 5 8 13 21 34 55 89... 
+
+
+(d) A positive integer is entered through the keyboard, write a 
+function to find the binary equivalent of this number using
+recursion. 
+
+
+
+(e) Write a recursive function to obtain the running sum of first 
+25 natural numbers. 
+
+
+
+
+(f) Write a C function to evaluate the series 
+sin(x) = x − (x3 / 3!) + (x5 / 5!) − (x7 / 7!) +.....
+to five significant digits.
+
+
+
+(g) Given three variables x, y, z write a function to circularly shift
+their values to right. In other words if x = 5, y = 8, z = 10 after 
+circular shift y = 5, z = 8, x =10 after circular shift y = 5, z = 8
+and x = 10. Call the function with variables a, b, c to 
+circularly shift values. 
+
+
+
+(h) Write a function to find the binary equivalent of a given 
+decimal integer and display it. 
+
+
+(i) If the lengths of the sides of a triangle are denoted by a, b, 
+and c, then area of triangle is given by
+area = root of (S(S − a)(S − b)(S − c))
+where, S = ( a + b + c ) / 2 
+
+
+(j) Write a function to compute the distance between two points 
+and use it to develop another function that will compute the
+area of the triangle whose vertices are A(x1, y1), B(x2, y2), 
+and C(x3, y3). Use these functions to develop a function 
+which returns a value 1 if the point (x, y) lines inside the 
+triangle ABC, otherwise a value 0. 
+
+
+(k) Write a function to compute the greatest common divisor 
+given by Euclid’s algorithm, exemplified for J = 1980, K =
+1617 as follows: 
+1980  / 1617 = 1      1980 – 1 * 1617 = 363 
+1617 / 363 = 4        1617 – 4 * 363  = 165 
+363 / 165 = 2          363 – 2 * 165  = 33 
+5  / 33 = 5            165 – 5 * 33   = 000 
+Thus, the greatest common divisor is 33

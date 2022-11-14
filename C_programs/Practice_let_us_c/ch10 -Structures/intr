@@ -1,0 +1,86 @@
+(a) Create a structure to specify data on students given below: 
+Roll number, Name, Department, Course, Year of joining 
+Assume that there are not more than 450 students in the 
+collage. 
+(a) Write a function to print names of all students who joined 
+in a particular year. 
+(b) Write a function to print the data of a student whose roll 
+number is given. 
+Chapter 10: Structures 389
+(b) Create a structure to specify data of customers in a bank. The 
+data to be stored is: Account number, Name, Balance in 
+account. Assume maximum of 200 customers in the bank. 
+(a) Write a function to print the Account number and name 
+of each customer with balance below Rs. 100. 
+(b) If a customer request for withdrawal or deposit, it is 
+given in the form: 
+Acct. no, amount, code (1 for deposit, 0 for withdrawal) 
+Write a program to give a message, “The balance is 
+insufficient for the specified withdrawal”. 
+(c) An automobile company has serial number for engine parts 
+starting from AA0 to FF9. The other characteristics of parts to 
+be specified in a structure are: Year of manufacture, material 
+and quantity manufactured. 
+(a) Specify a structure to store information corresponding to 
+a part. 
+(b) Write a program to retrieve information on parts with 
+serial numbers between BB1 and CC6. 
+(d) A record contains name of cricketer, his age, number of test 
+matches that he has played and the average runs that he has 
+scored in each test match. Create an array of structure to hold 
+records of 20 such cricketer and then write a program to read 
+these records and arrange them in ascending order by average 
+runs. Use the qusort( ) standard library function. 
+(e) There is a structure called employee that holds information 
+like employee code, name, date of joining. Write a program to 
+create an array of the structure and enter some data into it. 
+Then ask the user to enter current date. Display the names of 
+those employees whose tenure is 3 or more than 3 years 
+according to the given current date. 
+(f) Write a menu driven program that depicts the working of a 
+library. The menu options should be: 
+390 Let Us C 
+1. Add book information 
+2. Display book information 
+3. List all books of given author 
+4. List the title of specified book 
+5. List the count of books in the library 
+6. List the books in the order of accession number 
+7. Exit 
+Create a structure called library to hold accession number, 
+title of the book, author name, price of the book, and flag 
+indicating whether book is issued or not. 
+(g) Write a program that compares two given dates. To store date 
+use structure say date that contains three members namely 
+date, month and year. If the dates are equal then display 
+message as "Equal" otherwise "Unequal". 
+(h) Linked list is a very common data structure often used to store 
+similar data in memory. While the elements of an array 
+occupy contiguous memory locations, those of a linked list 
+are not constrained to be stored in adjacent location. The 
+individual elements are stored “somewhere” in memory, 
+rather like a family dispersed, but still bound together. The 
+order of the elements is maintained by explicit links between 
+them. Thus, a linked list is a collection of elements called 
+nodes, each of which stores two item of information—an 
+element of the list, and a link, i.e., a pointer or an address that 
+indicates explicitly the location of the node containing the 
+successor of this list element. 
+Write a program to build a linked list by adding new nodes at 
+the beginning, at the end or in the middle of the linked list. 
+Also write a function display( ) which display all the nodes 
+present in the linked list. 
+(i) A stack is a data structure in which addition of new element 
+or deletion of existing element always takes place at the same 
+Chapter 10: Structures 391
+end. This end is often known as ‘top’ of stack. This situation 
+can be compared to a stack of plates in a cafeteria where every 
+new plate taken off the stack is also from the ‘top’ of the 
+stack. There are several application where stack can be put to 
+use. For example, recursion, keeping track of function calls, 
+evaluation of expressions, etc. Write a program to implement 
+a stack using a linked list.
+(j) Unlike a stack, in a queue the addition of new element takes 
+place at the end (called ‘rear’ of queue) whereas deletion takes 
+place at the other end (called ‘front’ of queue). Write a 
+program to implement a queue using a linked list.
