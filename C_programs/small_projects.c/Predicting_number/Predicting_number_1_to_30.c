@@ -3,9 +3,9 @@ void input_frm_user();//
 
 int number = 0, answer;
 
-void input_frm_user()
+void input_frm_user()// deffining function
 {
-    printf("\nANSWER - ");// deffining function
+    printf("\nANSWER - ");
     scanf("%d", &answer);
 } 
 
